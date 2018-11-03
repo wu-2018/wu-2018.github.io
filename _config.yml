@@ -1,0 +1,22 @@
+exclude:
+  - "/vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
+
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+title: Wu's web
+url: "https://wu-2018.github.io" # the base hostname & protocol for your site
+baseurl: ""
+
+markdown: kramdown
+
+# Google analytics
+#ga_tracking_id: "UA-XXXX-1"
+

@@ -1,0 +1,12 @@
+- class: ML
+  img: work1.jpg
+  a: /blog
+  h2: t-SNE
+  p: t-SNE from scratch(only using numpy)
+
+- class: DV
+  img: work2.jpg
+  a: /blog
+  h2: ReLIVE
+  p: Receptor-Ligand Interaction Visualization
+
