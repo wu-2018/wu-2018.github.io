@@ -9,5 +9,8 @@
     {{ content }}
 
     {% include footer.html %}
+    {% if site.ga_tracking_id %}    
+        {% include ga.html %}
+    {% endif %}
     </body>
 </html>

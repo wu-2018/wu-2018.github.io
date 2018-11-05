@@ -5,3 +5,4 @@ Gemfile.lock
 .DS_Store
 Gemfile
 airspace-jekyll.gemspec
+.swp

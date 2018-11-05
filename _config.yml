@@ -18,5 +18,5 @@ baseurl: ""
 markdown: kramdown
 
 # Google analytics
-#ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-128570432-1"
 
