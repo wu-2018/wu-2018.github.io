@@ -23,24 +23,22 @@ permalink: /contact/
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form>
+          <form accept-charset="UTF-8" action="{{ site.contact_post }}" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" placeholder="Your Name" name="sender">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email Address">
+              <input type="text" class="form-control" placeholder="Your Email Address" name="addr">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+              <input type="text" class="form-control" placeholder="Subject" name="subject">
             </div>
-          </form>
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form>
             <div class="form-group-2">
-              <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+              <textarea class="form-control" rows="3" placeholder="Your Message" name="body"></textarea>
             </div>
             <button class="btn btn-default" type="submit">Send Message</button>
           </form>
@@ -83,7 +81,7 @@ permalink: /contact/
         <div class="block">
           <h2>Find my location in Google Map</h2>
             <div class="google-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7367.3148004734!2d114.26271514541473!3d22.59191351137359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340473366ec96cb7%3A0xac42d10e6e00762e!2sShenzhen+Huada+Jiyin+Academe!5e0!3m2!1sen!2sus!4v1541249159696" width="555" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7367.3148004734!2d114.26271514541473!3d22.59191351137359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340473366ec96cb7%3A0xac42d10e6e00762e!2sShenzhen+Huada+Jiyin+Academe!5e0!3m2!1sen!2sus!4v1541249159696" width="100%" height="330" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
       </div>
