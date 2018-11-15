@@ -143,8 +143,8 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-top: 20px;
 }
 #intro .block img {
-  padding-left: 10px;
-  max-width: 90%;
+  padding-top: 5px;
+  max-width: 100%;
 }
 #intro .section-title {
   margin-bottom: 0px;
@@ -224,7 +224,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Feature Start
 --*/
 #feature {
-  background: url("../img/featue-bg.jpg");
+  background: url("../img/feature-bg.jpg");
   background-position: 50% 94px;
   width: 100%;
   display: block;
