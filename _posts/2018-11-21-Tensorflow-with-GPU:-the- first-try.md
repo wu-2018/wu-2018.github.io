@@ -1,15 +1,19 @@
 ---
 layout: post
+title: "Tensorflow with GPU: the first try"
 author: Qinkai WU
 abstract: Installing Tensorflow-GPU 1.12.0 on Ubuntu 18.04. It's also my first time running tensorflow on my own graphics card.
 id: 2018112101
 ---
   
 Though I've been exploring machine learning for a while and I did understand that GPU can substantially boost the training speed due to its innate architecture, only recently I've made the decision to get myself a graphic card. In large part, it's due to the unbearable slowness caused by the increasing dataset size that I've got to tackle, but more importantly, it's the Double 11's promotion reached a special consensus with my balance.  
+
 ![bqb](/img/blog/2018112101/i0.png)
   
 It's only a GeForce GTX960 4G card, but for personal study instead of production-level tasks, it's already capable enough.  
-  
+
+![gtx960](/img/blog/2018112101/igc.jpg)
+
 Quickly I opened the PC case and everything seems fine, the PCIe slot there has been unoccupied for so long!
   
 ![pcie](/img/blog/2018112101/i2.jpg)
@@ -23,7 +27,7 @@ The drivers are available in Ubuntu's **Software & Updates**, also it can be ins
   
 ![driver](/img/blog/2018112101/i4.png)
 
-To check if the driver works, typing `nvidia-smi`, however I didn't get the expected message.  
+To check if the driver works, type `nvidia-smi`, however I didn't get the expected message.  
   
 ![drive_error](/img/blog/2018112101/i5.png)
   
@@ -31,9 +35,9 @@ But a simple reboot fixed it!
 
 ![drive_ok](/img/blog/2018112101/i6.jpg)
   
-Following the instruction at [Tensorflow's official website](https://www.tensorflow.org/install/gpu), I got CUDA Toolkit from [NVIDIA](https://developer.nvidia.com/cuda-downloads).  
+Following the instruction at [Tensorflow's official website](https://www.tensorflow.org/install/gpu), I got [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads) and [cuDNN](https://developer.nvidia.com/cudnn) from Nvidia.  
 
-After I've downloaded this huge file, I suddenly found it's version - 10.0,  was still not specifically supported by tensorflow. 
+After having downloaded these huge files(>2Gb in total), suddenly I found CUDA's version - 10.0,  was still not specifically supported by tensorflow. 
   
 ![cuda_v](/img/blog/2018112101/i8.png)
 
@@ -47,7 +51,7 @@ Maybe this nunace is totally negligible, but who knows what potential mess would
   
 Then I noticed another trouble: in order to get CUDA 9.0 work, I have to degrade GCC to version 6 ...  
 
-All these nuisance collectively provoked me to find a second solution - that is, build tensorflow from source.
+All these nuisance collectively provoked me to find a second solution - that is, building tensorflow from source.
 
 Thanks to some active online communities, I've also tried several unofficial `.whl` file built under the environment Ubuntu18.04 + CUDA10.0, but disappointingly, when I typed `import tensorflow`, all of them ended up giving error messages or crashing rapidly. 
   
@@ -59,14 +63,14 @@ After finishing `./configure`, upon using bazel to build Tensorflow, another err
 
 Then I found solution [here at github](https://github.com/tensorflow/tensorflow/issues/23401). Simply add a new line `import /home/wqk/A/tensorflow/tools/bazel.rc` to `.tf_configure.bazelrc` then run bazel again.
   
-**Noting that adding `--local_resources==RAM,CPU,I/O` e.g., `--local_resources==2048,1,1.0` after `bazel build` would help, since bazel can easily consume a lot of resource and even cause computer stuck.**
+**Note that adding `--local_resources==RAM,CPU,I/O` e.g., `--local_resources==2048,1,1.0` after `bazel build` would help, since bazel can easily consume a lot of resource and even cause computer stuck.**
 
 From now on, just wait. It'll take a huge amount of time, thinking hours, but of course it depends on the hardwares'performance and may varies from computer to computer. In my case, I just left my computer alone and the next morning when I came back to office, everything's done. 
 
 ![finish_build](/img/blog/2018112101/i10.png)
 
 The last step:  
-Using `bazel-bin/tensorflow/tools/pip_package/build_pip_package tensorflow_pkg` to generate the `.whl` file, then `cd tensorflow_pkg && sudo pip3 install *.whl`!
+Use `bazel-bin/tensorflow/tools/pip_package/build_pip_package tensorflow_pkg` to generate the `.whl` file, then `cd tensorflow_pkg && sudo pip3 install *.whl`!
 
 
 See if tensorflow can work properly:
