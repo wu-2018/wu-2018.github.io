@@ -4,6 +4,11 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="R73cdtclTx9-rl7qq-hValp_UvZamurm9HR-YcElfOk" />
+{% if site.ga_tracking_id %}
+  {% if jekyll.environment == 'production' %} 
+    {% include ga.html %}
+  {% endif %} 
+{% endif %}
 <!-- CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/css/owl.carousel.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
