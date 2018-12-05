@@ -1,6 +1,6 @@
-- class: ML
+- class: ML DV
   img: work1.jpg
-  a: /blog
+  a: /2018/11/30/tSNE-from-scratch.html
   h2: t-SNE
   p: t-SNE from scratch(only using numpy)
 
@@ -10,3 +10,8 @@
   h2: ReLIVE
   p: Receptor-Ligand Interaction Visualization
 
+- class: PH
+  img: work2.jpg
+  a: /gallery
+  h2: Selected photos
+  p: Sceneries everywhere

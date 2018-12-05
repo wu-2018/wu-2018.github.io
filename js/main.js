@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	$("#portfolio-contant-active").mixItUp();
-	$("#testimonial-slider").owlCarousel({
+	$("#gallery-slider").owlCarousel({
 	    paginationSpeed : 500,      
 	    singleItem:true,
-	    autoPlay: 3000,
+	    autoPlay: 4000,
 	});
 	$("#clients-logo").owlCarousel({
 		autoPlay: 3000,

@@ -1,0 +1,40 @@
+- name: pic
+  location: Erhai Lake, Dali, Yunnan, China 
+  time: 2017-10-01
+  photo: i1.jpg
+
+- name: pic
+  time: 2018-01-14
+  location: Hailuogou Glacier Forest Park, Luding, Garze, Sichuan, China
+  photo: i2.jpg
+
+- name: pic
+  time: 2017-09-29
+  location: Tiger Leaping Gorge, Shangri-La, Diqing, Yunnan, China
+  photo: i3.jpg
+
+- name: pic
+  time: 2017-10-01
+  location: Erhai Lake, Dali, Yunnan, China 
+  photo: i4.jpg
+
+- name: pic
+  time: 2016-01-24
+  location: Jiangan Campus, SCU, Chengdu, Sichuan, China 
+  photo: i5.jpg
+
+- name: pic
+  time: 2017-07-14
+  location: Mount Emei, Leshan, Sichuan, China 
+  photo: i6.jpg
+
+- name: pic
+  time: 2016-11-30
+  location: Jiangan Campus, SCU, Chengdu, Sichuan, China
+  photo: i7.jpg
+
+- name: pic
+  time: 2018-01-15
+  location: Suopo Watchtowers, Danba, Garze, Sichuan, China 
+  photo: i8.jpg
+
