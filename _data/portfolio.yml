@@ -6,12 +6,12 @@
 
 - class: DV
   img: work2.jpg
-  a: /blog
+  a: /relive
   h2: ReLIVE
   p: Receptor-Ligand Interaction Visualization
 
 - class: PH
-  img: work2.jpg
+  img: work3.jpg
   a: /gallery
   h2: Selected photos
   p: Sceneries everywhere
