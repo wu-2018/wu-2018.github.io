@@ -32,6 +32,10 @@ layout: page
     </div>
   </section>
 </div>
+{% if site.disqus %}
+  <div id="disqus">{% include disqus_cus.html %}</div>
+{% endif %}
+<hr />
 <p class="center-text" style="padding: 30px; font-size: 20px">
   <a href="{{ site.baseurl }}/blog">Back to blog list</a>
 </p>

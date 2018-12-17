@@ -1,0 +1,36 @@
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function(){
+// DON'T EDIT BELOW THIS LINE
+var disqus_onload = false;
+var d = document, s = d.createElement('script');
+s.src = 'https://wu2018.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+
+s.onload = function(){
+    disqus_onload = true;
+};
+s.onerror = function(){
+    disqus_onload = false;
+};
+(d.head || d.body).appendChild(s);
+setTimeout(function(){
+    if ( !disqus_onload ){
+        //disqus_onload = true;
+        dis = document.getElementById("disqus")
+        dis.innerHTML = "<p class='fail_tip'>Aww...Loading DISQUS failed!</p><p class='fail_tip'>However, you can still <a href='/contact'>leave a comment here</a></p>"
+    }
+}, 7000);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

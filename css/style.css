@@ -45,6 +45,15 @@
 .block code {
   white-space: pre;
 }
+.block ol {
+  padding-top: 20px;
+}
 div[class^="language-"] pre {
   background: #edf0f4;
+}
+#disqus {
+  padding: 30px;
+}
+#disqus .fail_tip{
+  color:#a9b4c6; 
 }
