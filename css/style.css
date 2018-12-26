@@ -57,3 +57,9 @@ div[class^="language-"] pre {
 #disqus .fail_tip{
   color:#a9b4c6; 
 }
+
+.navbar-nav > li:hover {
+  background-color: #d9d9f3;
+  border-radius: 10px 0;
+}
+

@@ -1,6 +1,14 @@
 ---
 layout: page
 ---
+{% if page.uniform_img_size %}
+<style type="text/css">
+    #intro .block img {
+        width: {{ page.uniform_img_size }};
+    }
+</style>
+{% endif %}
+
 {% if page.math %}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
