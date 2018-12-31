@@ -1,7 +1,7 @@
 ---
 layout: post  
 author: Qinkai WU
-title: Extracing Article Information on PubMed with Selenium  
+title: Extracting Article Information on PubMed with Selenium  
 abstract: Using selenium for automatically searching research articles and extracting the key messages on pubmed!  
 uniform_img_size: 800px  
 id: 2018112501  
