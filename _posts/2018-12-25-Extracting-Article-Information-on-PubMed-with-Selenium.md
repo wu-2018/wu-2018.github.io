@@ -1,8 +1,8 @@
 ---
 layout: post  
 author: Qinkai WU
-title: Extracting Article Information on PubMed with Selenium  
-abstract: Using selenium for automatically searching research articles and extracting the key messages on pubmed!  
+title: Extracting Article Information from PubMed with Selenium  
+abstract: Using selenium for automatically searching research articles and extracting the key messages from pubmed!  
 uniform_img_size: 800px  
 id: 2018112501  
 ---
@@ -15,7 +15,7 @@ So I was thinking if there's any way that I can make it more automated.
 Quickly I got `Selenium` in my mind. Compared to other python crawler packages like `requests` and `scrapy`, Selenium actually drives a 'human' browser (like IE, Chrome, Firefox, and so on), so we can see how it works, how the webpages are scrolled and clicked, i.e., we can supervise the entire process more intuitively.  
 
 > #### Note that the following instruction is for Firefox, which is the default in Ubuntu.  
-> #### The corresponding Jupyter Notebook is available [here at my github](https://github.com/wu-2018/collections).  
+> #### The corresponding Jupyter Notebook is available [here at my github](https://github.com/wu-2018/Collections/tree/master/selenium_pubmed).  
 
 
 ## Installation
@@ -325,6 +325,6 @@ with open("papers_info.pickle", "wb") as f:
 
 So, now we have the `doi`, `abstract` and many other useful information. 
 
-But what about their `experientment design`, `results` and ...? Sorry. Maybe NLP would help? However certainly that's far beyond my present ability!  
+But what about their `experientment design`, `results` and ...? Sorry. Maybe NLP would help? However certainly that's far beyond my ability currently!  
 
 
