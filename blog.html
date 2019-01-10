@@ -16,6 +16,8 @@ permalink: /blog/
     </div>
   </div>
 </section>
+{% include tags.html %}
+<h4 style="padding-left:40px;">the latest:</h4><hr/>
 {% for post in site.posts %}
 <div class="post-area">
   <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>

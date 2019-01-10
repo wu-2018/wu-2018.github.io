@@ -4,6 +4,7 @@ title: "Tensorflow with GPU: the first try"
 author: Qinkai WU
 abstract: Installing Tensorflow-GPU 1.12.0 on Ubuntu 18.04. It's also my first time running tensorflow on my own graphics card.
 id: 2018112101
+tags: ['Tensorflow', 'Deep Learning']
 ---
   
 Though I've been exploring machine learning for a while and I did understand that GPU can substantially boost the training speed due to its innate architecture, only recently I've made the decision to get myself a graphic card. In large part, it's due to the unbearable slowness caused by the increasing dataset size that I've got to tackle, but more importantly, it's the Double 11's promotion reached a special consensus with my balance.  

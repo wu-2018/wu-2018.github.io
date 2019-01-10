@@ -5,6 +5,7 @@ title: Extracting Article Information from PubMed with Selenium
 abstract: Using selenium for automatically searching research articles and extracting the key messages from pubmed!  
 uniform_img_size: 800px  
 id: 2018112501  
+tags: ['Selenium', 'Web Crawler']
 ---
 
 Recently I was assigned some unpleasant chores - reading papers and searching for the key information, then filling a form. The main unwillingness derives from the fact that these papers are typically some cohort studies, which was not relevant to my experience or interest at all.  

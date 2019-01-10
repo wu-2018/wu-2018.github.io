@@ -4,7 +4,8 @@ title: "t-SNE from scratch (only using numpy)"
 author: Qinkai WU
 abstract: t-SNE, a powerful and prevailing technique for dimensionality reduction. Here I'll briefly go through its mechanism and also present python code for implementing it from the very beginning.
 id: 2018113001
-math: True
+math: True  
+tags: ['t-SNE', 'Dimensionality Reduction']
 ---
   
 As a powerful dimensionality reduction method, t-SNE has been applied in a wide variety of areas since its first introduction by L.v.d. Maaten and G. Hinton in 2008.

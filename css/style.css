@@ -63,3 +63,55 @@ div[class^="language-"] pre {
   border-radius: 10px 0;
 }
 
+
+.post-tag {
+ display:inline-block;
+ background:rgba(106,159,181,0.15);
+ padding:0 .5rem;
+ margin-right:.5rem;
+ border-radius:4px;
+ color: #167c76;
+ font-family:"PT Sans",Helvetica,Arial,sans-serif;
+ font-size:90%;
+ -webkit-transition:all 0.1s ease-in-out;
+ -moz-transition:all 0.1s ease-in-out;
+ transition:all 0.1s ease-in-out
+}
+.post-tag:before {
+ content:"\f02b";
+ font-family:FontAwesome;
+ padding-right:.5em
+}
+.post-tag:hover {
+ text-decoration:none;
+ background: #088da5; 
+ color:#fff
+}
+
+#tags-div li {
+  margin-left: 40px;
+  list-style-type:circle;
+  color: #51a488;
+}
+
+#tags-div li:hover {
+  margin-left: 10px;
+  list-style-type:disc;
+}
+
+#tags-div h2 {
+  color: #067084;
+}
+
+#tags-div h4 a{
+  color: #51a488;
+}
+
+#tag-list {
+  margin-top: 70px;
+  padding-left: 40px;
+}
+
+#all-categories {
+  padding: 40px;
+}
