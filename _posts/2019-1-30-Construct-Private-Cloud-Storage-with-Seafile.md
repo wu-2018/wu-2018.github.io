@@ -207,7 +207,7 @@ private Boolean pingIP(String HTTPaddress) {
         }
     }
 ```
-See the change of the logging interface:  
+See the change of the login interface:  
 ![seadroid_2](/img/blog/2019013001/seadroid_2.png)  
 (*left: official version;  right: revised version*)  
 > #### [**See more changes in the source code**](https://github.com/haiwen/seadroid/compare/master...wu-2018:PairAddr).  

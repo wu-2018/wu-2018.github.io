@@ -64,7 +64,7 @@ After finishing `./configure`, upon using bazel to build Tensorflow, another err
 
 Then I found solution [here at github](https://github.com/tensorflow/tensorflow/issues/23401). Simply add a new line `import /home/wqk/A/tensorflow/tools/bazel.rc` to `.tf_configure.bazelrc` then run bazel again.
   
-**Note that adding `--local_resources==RAM,CPU,I/O` e.g., `--local_resources==2048,1,1.0` after `bazel build` would help, since bazel can easily consume a lot of resource and even cause computer stuck.**
+**Note that adding `--local_resources=RAM,CPU,I/O` e.g., `--local_resources=2048,1,1.0` after `bazel build` would help, since bazel can easily consume a lot of resource and even cause computer stuck.**
 
 From now on, just wait. It'll take a huge amount of time, thinking hours, but of course it depends on the hardwares'performance and may varies from computer to computer. In my case, I just left my computer alone and the next morning when I came back to office, everything's done. 
 
