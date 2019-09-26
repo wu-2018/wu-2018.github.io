@@ -122,7 +122,7 @@ Soon afterwards I found that `frp` might be a better choice, because we do not h
     WantedBy=multi-user.target
 
 
-Similar for `seahub` and `nginx`, just add a new file in `/etc/systemd/system/` repectively and change the key fields `ExecStart` and `ExecStop`.  
+Similar for `seahub` and `nginx`, just add a new file in `/etc/systemd/system/` respectively and change the key fields `ExecStart` and `ExecStop`.  
 
 As for `frpc`, if I simply use `/home/wqk/tool/frpc -c /home/wqk/Seafile/frpc.ini` in its `ExecStart`, it would report error and exit upon bootup. That's because `frpc` tries to connect to its server even before the network is reachable. So I packed this command into another script `frpc.sh` and set the `ExecStart` as `/home/wqk/script/frpc.sh`:  
 (`xxx.xx.xx.xxx` stands for the ip of the machine where `frps` is running)  

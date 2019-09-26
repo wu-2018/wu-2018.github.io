@@ -51,6 +51,9 @@
 div[class^="language-"] pre {
   background: #edf0f4;
 }
+div[class^="language-shell"] pre {
+  background: #fffbe2;
+}
 #disqus {
   padding: 30px;
 }
