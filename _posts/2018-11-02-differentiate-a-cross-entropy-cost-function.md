@@ -1,17 +1,18 @@
 ---
 layout: post
-author: Qinkai WU
+author: Qinkai Wu
 abstract: Covering all the details on how to calculate the gradient when using softmax and cross entropy in a neural network classifier.
-id: 2018110201
-math: True
+pid: 2018110201
+MathJax: True
 tags: ['Deep Learning', 'Classification']
+categories: journal
 ---
 
 Softmax and cross entropy are widely used for classification tasks.
   
 Look at each node from the last softmax layer of a typical neural network classifier:
   
-![img1](/img/blog/2018110201/img1.svg)
+![img1](/assets/img/post/{{ page.pid }}/img1.svg)
   
 Apparently,
   

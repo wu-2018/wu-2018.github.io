@@ -1,10 +1,11 @@
 ---
 layout: post  
-author: Qinkai WU
+author: Qinkai Wu
 title: Set up subdomains for multiple web Apps  
 uniform_img_size: 650px  
-bid: 2019092201  
+pid: 2019092201  
 tags: ['Web']
+categories: journal
 ---
 
 Suppose that you have registered a domain `mydomain.com`, and you are going to run multiple web applications either on a single or several devices, you may want to use subdomains for each of them like `app1.mydomain.com`, `app2.mydomain.com`, and so on.  
@@ -17,7 +18,7 @@ In my personal case, I have deployed JupyterLab, Rstudio, blog server and some o
 Log in to your account and open the settings panel provided by your domain registrar.   
 Just fill in the two fields - nameserver and IP address.  
  
-![add new record](/img/blog/{{ page.bid }}/gr.png)
+![add new record](/assets/img/post/{{ page.pid }}/gr.png)
 
 ### 2. Configure the Nginx  
 
@@ -82,7 +83,7 @@ Now insert a line `include /etc/nginx/site/*.conf;` right after the `http{` to i
 
 Go visit `test.mydomain.com` to see if it works!  
 
-![test_hello](/img/blog/{{ page.bid }}/test_hello.png)  
+![test_hello](/assets/img/post/{{ page.pid }}/test_hello.png)  
 
 Great! It's almost done!  
 
@@ -117,7 +118,7 @@ vi /etc/nginx/site/new.conf
 
 
 Again it works!  
-![rstudio](/img/blog/{{ page.bid }}/r_st.png)
+![rstudio](/assets/img/post/{{ page.pid }}/r_st.png)
 
 
 

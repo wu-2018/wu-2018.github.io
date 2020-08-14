@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "t-SNE from scratch (only using numpy)"
-author: Qinkai WU
+author: Qinkai Wu
 abstract: t-SNE, a powerful and prevailing technique for dimensionality reduction. Here I'll briefly go through its mechanism and also present python code for implementing it from the very beginning.
-id: 2018113001
-math: True  
+pid: 2018113001
+MathJax: True  
 tags: ['t-SNE', 'Dimensionality Reduction']
+categories: journal
 ---
   
 As a powerful dimensionality reduction method, t-SNE has been applied in a wide variety of areas since its first introduction by L.v.d. Maaten and G. Hinton in 2008.
@@ -136,7 +137,7 @@ It mainly has two improvements:
     $$
 
     t-distribution is heavily tailed so similar points are clustered more closely while dissimilar points are dispersed far apart, as a result, mitigating the crowding problem.  
-    ![t_vs_gaussian](/img/blog/2018113001/t_dis.png)
+    ![t_vs_gaussian](/assets/img/post/{{ page.pid }}/t_dis.png)
 
 So, the new gradient:
   
@@ -415,7 +416,7 @@ plt.scatter(li[i][:,0],li[i][:,1], c=y_train, cmap='tab10', s=2)
 plt.colorbar()
 ```
 
-![png](/img/blog/2018113001/output_18_1.png)
+![png](/assets/img/post/{{ page.pid }}/output_18_1.png)
 
 It works! Although not looks perfect. That's because getting a good t-SNE result requires tuning parameters, also I didn't consider many other optimizing tricks.
 
@@ -446,7 +447,7 @@ convert                                                         \
 
 ```
 
-![animated_tsne](/img/blog/2018113001/animated_tsne.gif)
+![animated_tsne](/assets/img/post/{{ page.pid }}/animated_tsne.gif)
 
 ## Appendix
   
@@ -465,7 +466,7 @@ plt.xlabel("$\sigma$")
 plt.ylabel("Perplexity")
 ```
 
-![png](/img/blog/2018113001/output_27_2.png)
+![png](/assets/img/post/{{ page.pid }}/output_27_2.png)
 
   
 ***

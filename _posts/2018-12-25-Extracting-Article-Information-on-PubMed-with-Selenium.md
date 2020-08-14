@@ -1,16 +1,17 @@
 ---
 layout: post  
-author: Qinkai WU
+author: Qinkai Wu
 title: Extracting Article Information from PubMed with Selenium  
 abstract: Using selenium for automatically searching research articles and extracting the key messages from pubmed!  
 uniform_img_size: 800px  
-id: 2018112501  
+pid: 2018122501  
 tags: ['Selenium', 'Web Crawler']
+categories: journal
 ---
 
 Recently I was assigned some unpleasant chores - reading papers and searching for the key information, then filling a form. The main unwillingness derives from the fact that these papers are typically some cohort studies, which was not relevant to my experience or interest at all.  
   
-![form](/img/blog/2018122501/table.png)
+![form](/assets/img/post/{{ page.pid }}/table.png)
   
 So I was thinking if there's any way that I can make it more automated.  
 Quickly I got `Selenium` in my mind. Compared to other python crawler packages like `requests` and `scrapy`, Selenium actually drives a 'human' browser (like IE, Chrome, Firefox, and so on), so we can see how it works, how the webpages are scrolled and clicked, i.e., we can supervise the entire process more intuitively.  
@@ -30,7 +31,7 @@ python3 -c "import selenium;print(selenium.__version__)"
 ```
 [Click here to check the version requirements between Selenium, Firefox and geckodriver.](http://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Support.html)  
   
-![version](/img/blog/2018122501/version_req.png)
+![version](/assets/img/post/{{ page.pid }}/version_req.png)
   
 Then download [geckodriver](https://github.com/mozilla/geckodriver/releases).  
   
@@ -45,7 +46,7 @@ sudo mv geckodriver /usr/bin/geckodriver
 
 First, save all the paper titles in a plain text file **(one title per line)** like this:  
   
-![title_example](/img/blog/2018122501/title_e.png)
+![title_example](/assets/img/post/{{ page.pid }}/title_e.png)
 
 Reading file and saving all titles in a list:
 
@@ -102,21 +103,21 @@ Now a browser window would pop up!
   
 Notice the little robot symbol in the address bar, that means the browser is under the control of exterior program.  
   
-![firfox_robot](/img/blog/2018122501/firefox_robot.png)
+![firfox_robot](/assets/img/post/{{ page.pid }}/firefox_robot.png)
 
 In most cases, upon sending the request we can directly get to the page with detailed information, so just `F12` and look for the corresponding tags then extract them using the method like `.find_element_by_class_name()`.  
   
-![de](/img/blog/2018122501/detail.png)
+![de](/assets/img/post/{{ page.pid }}/detail.png)
 
 But there are still some other cases where things can get much more troublesome:  
   
 Multiple results:  
   
-![mul](/img/blog/2018122501/multiple_result.png)
+![mul](/assets/img/post/{{ page.pid }}/multiple_result.png)
   
 Fortunately, sometimes there's a suggestion box and it's highly possible that's just the correct match:  
   
-![sensor](/img/blog/2018122501/sensor_content.png)  
+![sensor](/assets/img/post/{{ page.pid }}/sensor_content.png)  
   
 So just let selenium click that link in `sensor_content` `div`!  
 

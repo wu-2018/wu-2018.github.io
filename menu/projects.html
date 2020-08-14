@@ -1,0 +1,54 @@
+---
+layout: page
+title: Projects
+---
+
+    <!-- Slider Start -->
+<section id="global-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1>Some of my latest projects.</h1>
+                    <p>Code, biology, photos, ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Portfolio Start -->
+<section id="portfolio-work">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="portfolio-menu">
+                <ul>
+                    <li class="filter" data-filter="all">All</li>
+                    <li class="filter" data-filter=".ML">Machine Learning</li>
+                    <li class="filter" data-filter=".DV">Data Visualization</li>
+                    <li class="filter" data-filter=".PH">Photography</li>
+                </ul>
+              </div>
+              <div class="portfolio-contant">
+                <ul id="portfolio-contant-active">
+                  {% for i in site.data.projects %}
+		  <li class="mix {{ i.class }}">
+                      <a href="{{ i.a }}">
+                        <img src="{{ site.baseurl }}/assets/img/projects/{{ i.img }}" alt="">
+                        <div class="overly">
+                          <div class="position-center">
+                            <h2>{{ i.h2 }}</h2>
+                            <p>{{ i.p }}</p>
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+		  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

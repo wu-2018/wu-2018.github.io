@@ -1,0 +1,11 @@
+- class: ML DV
+  img: work1.jpg
+  a: /journal/tSNE-from-scratch.html 
+  h2: t-SNE
+  p: t-SNE from scratch(only using numpy)
+
+- class: PH
+  img: work2.jpg
+  a: /menu/gallery
+  h2: Selected photos
+  p: Sceneries

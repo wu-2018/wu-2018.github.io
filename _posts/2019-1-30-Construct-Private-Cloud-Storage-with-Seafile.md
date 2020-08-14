@@ -1,10 +1,11 @@
 ---
 layout: post  
-author: Qinkai WU
+author: Qinkai Wu
 title: Construct Private Cloud Storage with Seafile  
 uniform_img_size: 800px  
-id: 2019013001  
+pid: 2019013001  
 tags: ['Cloud Storage', 'Android Dev']
+categories: journal
 ---
 
 Ridiculously slow download speed, limited storage space, ... many people has long been sick of "Baidu Netdisk" and I'm no exception. So I was thinking why can't I build myself a cloud storage? It would be unrestrained, much faster and also ensures better privacy.
@@ -65,7 +66,7 @@ sudo ./seafile.sh start
 sudo ./seahub.sh start
 ```
 Open `http://localhost:8000` in the browser and you'll see:  
-![seahub](/img/blog/2019013001/seahub.png)
+![seahub](/assets/img/post/{{ page.pid }}/seahub.png)
   
   
 ## Configure Nginx
@@ -164,7 +165,7 @@ Now reboot the computer and all of them should automatically start.
   
 - **fix error when setting '/seafhttp'**  
 As I just discussed above, after setting `FILE_SERVER_ROOT = '/seafhttp'` the web browser still works well. But in the Seafile Android app, I was logged in successfully but cannot download or upload files. After carefully checked the source code, I find the problems was at line 464 and 783 in `SeafConnection.java`, it won't get the full address in that case.  
-![seadroid_1](/img/blog/2019013001/seadroid_1.png)  
+![seadroid_1](/assets/img/post/{{ page.pid }}/seadroid_1.png)  
 (*left: FILE_SERVER_ROOT = 'http://172.17.15.11:8082';  right: FILE_SERVER_ROOT = '/seafhttp'*)  
 [**See my changes**](https://github.com/haiwen/seadroid/compare/master...wu-2018:master). 
   
@@ -208,7 +209,7 @@ private Boolean pingIP(String HTTPaddress) {
     }
 ```
 See the change of the login interface:  
-![seadroid_2](/img/blog/2019013001/seadroid_2.png)  
+![seadroid_2](/assets/img/post/{{ page.pid }}/seadroid_2.png)  
 (*left: official version;  right: revised version*)  
 > #### [**See more changes in the source code**](https://github.com/haiwen/seadroid/compare/master...wu-2018:PairAddr).  
   
